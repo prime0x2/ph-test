@@ -1,8 +1,3 @@
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from 'tailwind-merge';
-
-export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
-
 export const getChartData = (innerCircleWidth: number) => {
   const innerCircleDiameter = innerCircleWidth;
   const innerCircleRadius = innerCircleDiameter / 2;
@@ -15,8 +10,7 @@ export const getChartData = (innerCircleWidth: number) => {
   // const distanceFromCenter = innerCircleRadius + outerCircleRadius + 200; // for specific distance
   const distanceFromCenter = (innerCircleRadius + outerCircleRadius) * 1.5; // 1.5 times of inner circle
 
-  const lineWidth =
-    distanceFromCenter - (innerCircleRadius + outerCircleRadius);
+  const lineWidth = distanceFromCenter - (innerCircleRadius + outerCircleRadius);
 
   return {
     innerCircle: {

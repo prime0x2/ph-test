@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import { data } from "@/dummy";
-import { cn, getChartData } from "@/utils/helper";
+import { getChartData } from "@/utils/helper";
 
 const TestPage: React.FC = () => {
   const { innerCircle, outerCircle, distanceFromCenter, lineWidth } = getChartData(220);
@@ -59,9 +59,7 @@ const TestPage: React.FC = () => {
             return (
               <div
                 key={bank.id}
-                className={cn(
-                  `line-style absolute flex cursor-pointer items-center justify-center rounded-full border border-indigo-600 bg-slate-800 before:absolute before:h-[1px] before:bg-indigo-600 before:content-['']`
-                )}
+                className='line-style absolute flex cursor-pointer items-center justify-center rounded-full border border-indigo-600 bg-slate-800 before:absolute before:h-[1px] before:bg-indigo-600 before:content-[""]'
                 style={{
                   width: outerCircle.diameter,
                   height: outerCircle.diameter,
