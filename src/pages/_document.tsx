@@ -1,13 +1,16 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import React from 'react';
+import { Html, Head, Main, NextScript } from 'next/document';
 
-export default function Document() {
+const Document: React.FC = () => {
   return (
-    <Html lang="en">
+    <Html lang='en'>
       <Head />
-      <body className="antialiased">
+      <body className='antialiased'>
         <Main />
         <NextScript />
       </body>
     </Html>
   );
-}
+};
+
+export default Document;
